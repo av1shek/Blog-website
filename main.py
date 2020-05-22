@@ -191,5 +191,6 @@ def contact():
 # def post():
 #     return render_template('post.html', params=params)
 
+if __name__ == '__main__':
+    app.run(debug = True)
 
-app.run(debug = True)
