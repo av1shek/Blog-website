@@ -34,22 +34,39 @@ db = SQLAlchemy(app)
 
 
 class Contacts(db.Model):
+    __tablename__ = 'contacts'
     sno = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(80), nullable=False)
     phone_num = db.Column(db.String(12), nullable=False)
-    msg = db.Column(db.String(120), nullable=False)
+    msg = db.Column(db.Text(), nullable=False)
     date = db.Column(db.String(12), nullable=True)
-    email = db.Column(db.String(20), nullable=False)
+    email = db.Column(db.String(100), nullable=False)
+
+    def __init__(self, name, phone_num, msg, email, date):
+        self.name = name
+        self.phone_num = phone_num
+        self.msg = msg
+        self.date = date
+        self.email = email
 
 
 class Posts(db.Model):
+    __tablename__ = 'posts'
     sno = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(80), nullable=False)
-    slug = db.Column(db.String(21), nullable=False)
-    content = db.Column(db.String(120), nullable=False)
-    date = db.Column(db.String(12), nullable=True)
-    tagline = db.Column(db.String(12), nullable=False)
-    img_file = db.Column(db.String(12), nullable=True)
+    slug = db.Column(db.String(100), nullable=False)
+    content = db.Column(db.Text(), nullable=False)
+    date = db.Column(db.String(120), nullable=True)
+    tagline = db.Column(db.String(100), nullable=False)
+    img_file = db.Column(db.String(100), nullable=True)
+
+    def __init__(self, title, slug, content, date, tagline, img_file):
+        self.title = title
+        self.slug = slug
+        self.content = content
+        self.date = date
+        self.tagline = tagline
+        self.img_file = img_file
 
 '''
 def updatesno(sno):
