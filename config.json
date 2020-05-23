@@ -2,7 +2,7 @@
   "params": {
     "local_server": "True",
     "local_uri": "mysql://root:@localhost/codingthunder",
-    "prod_uri": "postgres://bxqoujzmcfipav:642a1d50385e8d11d6264219e8a65f0e64cd342819e7cec83dba57a76a015a35@ec2-54-86-170-8.compute-1.amazonaws.com:5432/dbu00feucdaskj",
+    "prod_uri": "postgres://xctxzodglaohhf:52f64b2e4be2bb50e184b07b0a3ab4b3cb61f569d05d91229d581f6e9defc95a@ec2-18-233-32-61.compute-1.amazonaws.com:5432/d9cip98r33jpdv",
     "fb_url": "https://facebook.com/codingthunder",
     "gh_url": "https://github.com/codingthunder",
     "tw_url": "http://twitter.com/codingthunder,",
