@@ -37,9 +37,9 @@ class Contacts(db.Model):
     __tablename__ = 'contacts'
     sno = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(80), nullable=False)
-    phone_num = db.Column(db.String(12), nullable=False)
+    phone_num = db.Column(db.String(100), nullable=False)
     msg = db.Column(db.Text(), nullable=False)
-    date = db.Column(db.String(12), nullable=True)
+    date = db.Column(db.String(100), nullable=True)
     email = db.Column(db.String(100), nullable=False)
 
     def __init__(self, name, phone_num, msg, email, date):
